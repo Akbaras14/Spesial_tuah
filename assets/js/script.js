@@ -52,15 +52,3 @@ function createHeart() {
     setTimeout(() => heart.remove(), 5000);
 }
 
-document.addEventListener("mousemove", (event) => {
-        const heart = document.createElement("div");
-        heart.classList.add("heart-mouse");
-        heart.style.left = `${event.clientX}px`;
-        heart.style.top = `${event.clientY}px`;
-        heart.style.animation = `fall ${Math.random() * 2 + 1}s linear forwards`;
-        document.body.appendChild(heart);
-        
-        setTimeout(() => {
-          heart.remove();
-        }, 2000);
-      });
