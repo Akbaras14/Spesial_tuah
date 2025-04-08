@@ -14,7 +14,7 @@ yesBtn.addEventListener("click", () => {
       blur(100px)
     `
   }).then(() => {
-    const phoneNumber = "+6285893801972";
+    const phoneNumber = "+6285893802972";
     const message = "Hai! Aku juga senang kamu mau jadi bagian spesial di hidupku ❤️";
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.location.href = whatsappLink;
