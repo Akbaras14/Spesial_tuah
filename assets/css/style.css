@@ -207,14 +207,14 @@ img {
 }
 
 .heart-mouse {
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        background-color: rgb(255, 88, 116);
-        transform: rotate(-45deg);
-        pointer-events: none;
-        z-index: 1;
-      }
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 88, 116);
+  transform: rotate(-45deg);
+  pointer-events: none;
+  z-index: 1;
+}
       .heart-mouse::before,
       .heart-mouse::after {
         content: "";
