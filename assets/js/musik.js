@@ -36,3 +36,30 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("musicTime");
     }
 });
+
+function createHeart(x, y) {
+  const heart = document.createElement("div");
+  heart.classList.add("heart-mouse");
+  heart.style.left = `${x}px`;
+  heart.style.top = `${y}px`;
+  heart.style.position = "absolute";
+  heart.style.animation = `fall ${Math.random() * 2 + 1}s linear forwards`;
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 2000);
+}
+
+document.addEventListener("mousemove", (event) => {
+  createHeart(event.clientX, event.clientY);
+});
+
+document.addEventListener("touchmove", (event) => {
+  const touch = event.touches[0];
+  if (touch) {
+    createHeart(touch.clientX, touch.clientY);
+  }
+});
+
