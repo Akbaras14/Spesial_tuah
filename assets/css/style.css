@@ -205,3 +205,41 @@ img {
     font-style: normal;
   position: relative;
 }
+
+.heart-mouse {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(255, 88, 116);
+        transform: rotate(-45deg);
+        pointer-events: none;
+        z-index: 1;
+      }
+      .heart-mouse::before,
+      .heart-mouse::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(255, 88, 116);
+        border-radius: 50%;
+      }
+      .heart-mouse::before {
+        top: -10px;
+        left: 0;
+      }
+      .heart-mouse::after {
+        left: 10px;
+        top: 0;
+      }
+      
+      @keyframes fall {
+        0% {
+          transform: translateY(0) scale(1) rotate(-45deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100px) scale(0.5) rotate(-45deg);
+          opacity: 0;
+        }
+      }
